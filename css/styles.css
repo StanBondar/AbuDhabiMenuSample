@@ -3,6 +3,7 @@
 .container {
   width: 100%;
   min-width: 320px;
+  max-height: fit-content;
   display: flex;
   flex-direction: column;
 }
