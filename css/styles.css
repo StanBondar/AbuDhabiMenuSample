@@ -1,0 +1,12 @@
+@import "./reset.css";
+
+.container {
+  width: 100%;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  width: 100%;
+}
