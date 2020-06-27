@@ -12,16 +12,17 @@
   width: 100%;
 } */
 
-div {
+div.container {
   width: 100%;
   min-width: 320px;
+  background-color: #000000;
 }
 
 .thumb {
   width: 100%;
 }
 
-img {
+img.menu-item {
   width: 100%;
   display: block;
 }
