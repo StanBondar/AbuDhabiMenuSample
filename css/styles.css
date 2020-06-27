@@ -23,6 +23,17 @@ div {
 
 img {
   width: 100%;
+  display: block;
+}
+
+img:not([src]) {
+  visibility: hidden;
+}
+
+@-moz-document url-prefix() {
+  img:-moz-loading {
+    visibility: hidden;
+  }
 }
 
 .fade {
