@@ -1,3 +1,3 @@
-debugger;
-const observer = lozad();
-observer.observe();
+$(function () {
+  $(".lazy").Lazy();
+});
