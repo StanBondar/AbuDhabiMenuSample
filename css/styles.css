@@ -15,7 +15,7 @@
 div.container {
   width: 100%;
   min-width: 320px;
-  min-height: 200vh;
+  min-height: 100vh;
   background-color: #000000;
 }
 
