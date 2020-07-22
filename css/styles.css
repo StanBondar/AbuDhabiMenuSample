@@ -17,6 +17,7 @@ div.container {
   min-width: 320px;
   min-height: 100vh;
   background-color: #000000;
+  position: relative;
 }
 
 .thumb {
@@ -107,4 +108,31 @@ img:not([src]) {
   to {
     opacity: 1;
   }
+}
+
+.go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  text-decoration: none;
+}
+
+.go-to-top,
+.go-to-top:hover,
+.go-to-top:focus,
+.go-to-top:active {
+  outline: none;
+}
+
+.go-to-top span {
+  transform: rotate(-90deg);
+  color: white;
+  font-size: 16px;
 }

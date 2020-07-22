@@ -3,30 +3,30 @@
     console.log(Date.now(), eventName, element.getAttribute("data-src"));
   }
 
-  var callback_enter = function (element) {
+  const callback_enter = function (element) {
     logElementEvent("🔑 ENTERED", element);
   };
-  var callback_exit = function (element) {
+  const callback_exit = function (element) {
     logElementEvent("🚪 EXITED", element);
   };
-  var callback_loading = function (element) {
+  const callback_loading = function (element) {
     logElementEvent("⌚ LOADING", element);
   };
-  var callback_loaded = function (element) {
+  const callback_loaded = function (element) {
     logElementEvent("👍 LOADED", element);
   };
-  var callback_error = function (element) {
+  const callback_error = function (element) {
     logElementEvent("💀 ERROR", element);
     element.src = "https://via.placeholder.com/440x560/?text=Error+Placeholder";
   };
-  var callback_finish = function () {
+  const callback_finish = function () {
     logElementEvent("✔️ FINISHED", document.documentElement);
   };
-  var callback_cancel = function (element) {
+  const callback_cancel = function (element) {
     logElementEvent("🔥 CANCEL", element);
   };
 
-  var ll = new LazyLoad({
+  const ll = new LazyLoad({
     // Assign the callbacks defined above
     callback_enter: callback_enter,
     callback_exit: callback_exit,
@@ -37,3 +37,13 @@
     callback_finish: callback_finish,
   });
 })();
+
+const goToTop = document.querySelector(".go-to-top");
+goToTop.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  document.querySelector("#top").scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+});
