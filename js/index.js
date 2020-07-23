@@ -47,3 +47,8 @@ goToTop.addEventListener("click", function (e) {
     block: "start",
   });
 });
+
+goToTop.style.display = 'none';
+document.addEventListener('scroll', ()=> {
+  document.scrollTop()
+});
