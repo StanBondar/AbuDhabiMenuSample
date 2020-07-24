@@ -48,7 +48,12 @@ goToTop.addEventListener("click", function (e) {
   });
 });
 
-goToTop.style.display = 'none';
-document.addEventListener('scroll', ()=> {
-  document.scrollTop()
+goToTop.style.display = "none";
+document.addEventListener("scroll", () => {
+  if (window.scrollY > window.outerHeight) {
+    goToTop.style.display = "block";
+  }
+  if (window.scrollY <= window.outerHeight) {
+    goToTop.style.display = "none";
+  }
 });

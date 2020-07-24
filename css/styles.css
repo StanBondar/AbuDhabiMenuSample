@@ -16,8 +16,88 @@ div.container {
   width: 100%;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #000000;
+  background-color: #ffffff;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid black;
+  box-shadow: 0px -8px 38px black;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+}
+
+.wrapper {
+  max-width: 1200px;
+}
+
+.head_innerWrapper {
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head_logo {
+  width: 70px;
+}
+
+.head_menu {
+  display: flex;
+  height: 100%;
+}
+
+.head_menu-item {
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in;
+}
+
+.head_menu-item a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.head_menu-item:hover {
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+.head_menu-item {
+  display: none;
+}
+
+.menu-icon {
+  font-size: 24px;
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .head_logo {
+    width: 100px;
+  }
+
+  .head_menu-item {
+    display: flex;
+    height: 100%;
+  }
+
+  .menu-icon {
+    display: none;
+  }
 }
 
 .thumb {
