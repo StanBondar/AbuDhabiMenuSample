@@ -57,3 +57,20 @@ document.addEventListener("scroll", () => {
     goToTop.style.display = "none";
   }
 });
+
+const navbar = document.querySelector("#navbar");
+
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    navbar.style.top = "0";
+  } else {
+    navbar.style.top = "-60px";
+  }
+  prevScrollpos = currentScrollPos;
+};
+
+navbar.addEventListener("click", () => {
+  navbar.style.top = "0";
+});
