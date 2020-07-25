@@ -56,13 +56,13 @@ div.container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 360px;
   height: fit-content;
 }
 
 .head_menu-wrapper {
   display: none;
-  /* height: 100%; */
+  width: 100%;
+  max-width: 360px;
   min-height: fit-content;
   position: absolute;
   right: 0;
@@ -72,6 +72,18 @@ div.container {
 
 .head_menu-wrapper:hover {
   display: block;
+}
+
+.menuElement {
+  display: none;
+}
+
+.activeMenu {
+  display: block;
+}
+
+.activeMenuLink {
+  background-color: lightgrey;
 }
 
 .head_menu-item {
@@ -103,10 +115,28 @@ div.container {
 .menu-icon {
   font-size: 24px;
   color: black;
+  transition: all 0.3s ease-in;
+}
+
+.menu-icon:hover {
+  /* display: none; */
+  /* animation: hideShow 0.3s; */
+  transform: rotate(90deg);
 }
 
 .menu-icon:hover + nav {
   display: block;
+}
+
+@keyframes hideShow {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -123,10 +153,11 @@ div.container {
   .head_menu-wrapper {
     display: block;
     position: static;
+    width: fit-content;
+    max-width: unset;
     height: 100%;
   }
 
-  
   .head_menu-item {
     height: 100%;
   }

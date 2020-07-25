@@ -26,14 +26,15 @@
         </div>
         <nav class="head_menu-wrapper">
           <ul class="head_menu">
-            <li class="head_menu-item"><a href="#menu_item">Страви та напої</a></li>
-            <li class="head_menu-item"><a href="#menu_item">Димне меню</a></li>
-            <li class="head_menu-item"><a href="#menu_item">Літні пропозиції</a></li>
+            <li class="head_menu-item activeMenuLink"><a class="head_menu-link" href="#mainMenu">Страви та напої</a></li>
+            <li class="head_menu-item"><a class="head_menu-link" href="#hookah">Кальянне меню</a></li>
+            <li class="head_menu-item"><a class="head_menu-link" href="#season">Сезоннi пропозиції</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <div class="menuElement wrapper"
+    <div data-menu-link="#mainMenu"
+      class="menuElement wrapper activeMenu"
       id="main-menu">
       <img data-src="./img/mainMenu/01.jpg"
         alt="menu page"
@@ -96,6 +97,24 @@
         alt="menu page"
         class="menu-item lazy">
       <img data-src="./img/mainMenu/21.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+    </div>
+    <div data-menu-link="#season"
+      class="menuElement wrapper">
+      <img data-src="./img/season/summer1.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+    </div>
+    <div data-menu-link="#hookah"
+      class="menuElement wrapper">
+      <img data-src="./img/hookah/hookah.jpeg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/hookah/hookah2.jpeg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/hookah/hookah3.jpeg"
         alt="menu page"
         class="menu-item lazy">
     </div>

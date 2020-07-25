@@ -74,3 +74,41 @@ window.onscroll = function () {
 navbar.addEventListener("click", () => {
   navbar.style.top = "0";
 });
+
+const menuFolders = document.querySelectorAll(".menuElement");
+
+const headMenu = document.querySelector(".head_menu");
+headMenu.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (
+    e.target.classList.contains("head_menu-item") ||
+    e.target.classList.contains("head_menu-link")
+  ) {
+    menuFolders.forEach((el) => {
+      el.classList.remove("activeMenu");
+    });
+    Array.from(headMenu.children).forEach((el) => {
+      el.classList.remove("activeMenuLink");
+    });
+    if (e.target.classList.contains("head_menu-item")) {
+      e.target.classList.add("activeMenuLink");
+      document
+        .querySelector(
+          `div.menuElement[data-menu-link="${e.target.firstChild.getAttribute(
+            "href"
+          )}"]`
+        )
+        .classList.add("activeMenu");
+    } else if (
+      e.target.classList.contains("head_menu-link") &&
+      e.target.parentNode.classList.contains("head_menu-item")
+    ) {
+      e.target.parentNode.classList.add("activeMenuLink");
+      document
+        .querySelector(
+          `div.menuElement[data-menu-link="${e.target.getAttribute("href")}"]`
+        )
+        .classList.add("activeMenu");
+    }
+  }
+});
