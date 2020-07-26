@@ -26,16 +26,22 @@
         </div>
         <nav class="head_menu-wrapper">
           <ul class="head_menu">
-            <li class="head_menu-item activeMenuLink"><a class="head_menu-link" href="#mainMenu">Страви та напої</a></li>
-            <li class="head_menu-item"><a class="head_menu-link" href="#hookah">Кальянне меню</a></li>
-            <li class="head_menu-item"><a class="head_menu-link" href="#season">Сезоннi пропозиції</a></li>
+            <li class="head_menu-item activeMenuLink"><a rel="noopener noreferrer"
+                class="head_menu-link"
+                href="#mainMenu">Страви та напої</a></li>
+            <li class="head_menu-item"><a rel="noopener noreferrer"
+                class="head_menu-link"
+                href="#hookah">Кальянне меню</a></li>
+            <li class="head_menu-item"><a rel="noopener noreferrer"
+                class="head_menu-link"
+                href="#season">Сезоннi пропозиції</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <div data-menu-link="#mainMenu"
       class="menuElement wrapper activeMenu"
-      id="main-menu">
+      id="mainMenu">
       <img data-src="./img/mainMenu/01.jpg"
         alt="menu page"
         class="menu-item lazy">
@@ -101,13 +107,15 @@
         class="menu-item lazy">
     </div>
     <div data-menu-link="#season"
-      class="menuElement wrapper">
+      class="menuElement wrapper"
+      id="season">
       <img data-src="./img/season/summer1.jpg"
         alt="menu page"
         class="menu-item lazy">
     </div>
     <div data-menu-link="#hookah"
-      class="menuElement wrapper">
+      class="menuElement wrapper"
+      id="hookah">
       <img data-src="./img/hookah/hookah.jpeg"
         alt="menu page"
         class="menu-item lazy">
@@ -119,7 +127,8 @@
         class="menu-item lazy">
     </div>
 
-    <a href="#top"
+    <a rel="noopener noreferrer"
+      href="#top"
       class="go-to-top"><svg viewBox="0 0 32 32"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -133,6 +142,7 @@
       </svg></a>
   </div>
   <script src="./js/lazyload.min.js"></script>
+  <script src="./js/jquery-3.5.1.min.js"></script>
   <script src="./js/index.js"></script>
 </body>
 

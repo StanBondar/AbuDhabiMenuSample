@@ -1,6 +1,6 @@
 (function () {
   function logElementEvent(eventName, element) {
-    console.log(Date.now(), eventName, element.getAttribute("data-src"));
+    // console.log(Date.now(), eventName, element.getAttribute("data-src"));
   }
 
   const callback_enter = function (element) {
@@ -42,19 +42,26 @@ const goToTop = document.querySelector(".go-to-top");
 goToTop.addEventListener("click", function (e) {
   e.preventDefault();
 
-  document.querySelector("#top").scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-  });
+  // document.querySelector("#top").scrollIntoView({
+  //   behavior: "smooth",
+  //   block: "start",
+  // });
+
+  $("body,html").animate(
+    {
+      scrollTop: 0,
+    },
+    400
+  );
 });
 
 goToTop.style.display = "none";
 document.addEventListener("scroll", () => {
   if (window.scrollY > window.outerHeight) {
-    goToTop.style.display = "block";
+    $(".go-to-top").show(300);
   }
   if (window.scrollY <= window.outerHeight) {
-    goToTop.style.display = "none";
+    $(".go-to-top").hide(300);
   }
 });
 
