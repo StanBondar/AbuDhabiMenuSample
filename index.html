@@ -13,11 +13,137 @@
 </head>
 
 <body>
-  <div class="container">
-    <img src="./img/summerMenu.jpg"
-      alt="menu page"
-      class="menu-item">
+  <div class="container"
+    id="top">
+    <header id="navbar"
+      class="head">
+      <div class="wrapper head_innerWrapper">
+        <img src="./img/logo.png"
+          class="head_logo"
+          alt="company logo">
+        <div class="menu-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav class="head_menu-wrapper">
+          <ul class="head_menu">
+            <li class="head_menu-item activeMenuLink"><a rel="noopener noreferrer"
+                class="head_menu-link"
+                href="#mainMenu">Страви та напої</a></li>
+            <li class="head_menu-item"><a rel="noopener noreferrer"
+                class="head_menu-link"
+                href="#hookah">Кальянне меню</a></li>
+            <li class="head_menu-item"><a rel="noopener noreferrer"
+                class="head_menu-link"
+                href="#season">Сезоннi пропозиції</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div data-menu-link="#mainMenu"
+      class="menuElement wrapper activeMenu"
+      id="mainMenu">
+      <img data-src="./img/mainMenu/01.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/02.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/03.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/04.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/05.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/06.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/07.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/08.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/09.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/10.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/11.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/12.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/13.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/14.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/15.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/16.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/17.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/18.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/19.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/20.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/mainMenu/21.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+    </div>
+    <div data-menu-link="#season"
+      class="menuElement wrapper"
+      id="season">
+      <img data-src="./img/season/summer1.jpg"
+        alt="menu page"
+        class="menu-item lazy">
+    </div>
+    <div data-menu-link="#hookah"
+      class="menuElement wrapper"
+      id="hookah">
+      <img data-src="./img/hookah/hookah.jpeg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/hookah/hookah2.jpeg"
+        alt="menu page"
+        class="menu-item lazy">
+      <img data-src="./img/hookah/hookah3.jpeg"
+        alt="menu page"
+        class="menu-item lazy">
+    </div>
+
+    <a rel="noopener noreferrer"
+      href="#top"
+      class="go-to-top"><svg viewBox="0 0 32 32"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        x="0"
+        y="0"
+        xml:space="preserve"
+        style="display: inline-block; width: 100%; height: 100%; stroke-width: 0; stroke: white; fill: white;">
+        <path transform="scale(1.4) translate(1,-5)"
+          d="M19.196 23.429q0 0.232-0.179 0.411l-0.893 0.893q-0.179 0.179-0.411 0.179t-0.411-0.179l-7.018-7.018-7.018 7.018q-0.179 0.179-0.411 0.179t-0.411-0.179l-0.893-0.893q-0.179-0.179-0.179-0.411t0.179-0.411l8.321-8.321q0.179-0.179 0.411-0.179t0.411 0.179l8.321 8.321q0.179 0.179 0.179 0.411zM19.196 16.571q0 0.232-0.179 0.411l-0.893 0.893q-0.179 0.179-0.411 0.179t-0.411-0.179l-7.018-7.018-7.018 7.018q-0.179 0.179-0.411 0.179t-0.411-0.179l-0.893-0.893q-0.179-0.179-0.179-0.411t0.179-0.411l8.321-8.321q0.179-0.179 0.411-0.179t0.411 0.179l8.321 8.321q0.179 0.179 0.179 0.411z">
+        </path>
+      </svg></a>
   </div>
+  <script src="./js/lazyload.min.js"></script>
+  <script src="./js/jquery-3.5.1.min.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
